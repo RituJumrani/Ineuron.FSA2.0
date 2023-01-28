@@ -1,0 +1,87 @@
+USE WAREHOUSE DEMO_WAREHOUSE;
+USE DATABASE DEMO_DATABASE;
+
+CREATE OR REPLACE TABLE RJ_SALES_DATA
+(order_id VARCHAR(20),
+order_date VARCHAR(60)PRIMARY KEY,
+ship_date VARCHAR(60), 
+ship_mode VARCHAR(20),
+customer_name VARCHAR(50),
+segment VARCHAR(30),
+state VARCHAR(100),
+country VARCHAR(100),
+market CHAR(20),
+region CHAR(30),
+product_id VARCHAR(50),
+category CHAR(30),
+sub_category CHAR(40),
+product_name VARCHAR2(150),
+sales NUMBER(8,2),
+quantity CHAR(10),
+discount FLOAT,
+profit FLOAT,
+shipping_cost FLOAT,
+order_priority CHAR(50),
+year VARCHAR(30));
+---------------------------------------------------------------------------------------------------------------------------------------
+
+DESCRIBE TABLE RJ_SALES_DATA;
+SELECT * FROM RJ_SALES_DATA;
+---------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE RJ_SALES_DATA
+DROP PRIMARY KEY;
+
+ALTER TABLE RJ_SALES_DATA
+ADD PRIMARY KEY (order_id);
+----------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE RJ_SALES_DATA ADD (new_order_date DATE);
+ALTER TABLE RJ_SALES_DATA ADD (new_ship_date DATE);
+
+update RJ_SALES_DATA
+SET new_order_date=TO_DATE(order_date,'yyyy-mm-dd');
+
+update RJ_SALES_DATA
+SET new_ship_date=TO_DATE(ship_date,'yyyy-mm-dd');
+
+ALTER TABLE RJ_SALES_DATA
+DROP(order_date);
+ALTER TABLE RJ_SALES_DATA
+DROP(ship_date);
+
+ALTER TABLE RJ_SALES_DATA
+RENAME column new_order_date TO order_date;
+
+ALTER TABLE RJ_SALES_DATA
+RENAME column new_ship_date TO ship_date;
+SELECT * FROM RJ_SALES_DATA;
+--------------------------------------------------------------------------------------------------------------------------------
+SELECT order_id from RJ_SALES_DATA;
+CREATE OR REPLACE TABLE RJ_SALES_DATA AS 
+SELECT *,
+    SPLIT_PART(ORDER_ID,'-',3) AS ORDER_EXTRACT FROM RJ_SALES_DATA;
+    
+------------------------------------------------------------------------------------------------------------------------------------
+CREATE OR REPLACE TABLE RJ_SALES_DATA AS
+SELECT *,
+    CASE
+        WHEN DISCOUNT > '0.0000' THEN 'YES' 
+        ELSE 'NO'
+    END AS DISCOUNT_FLAG
+FROM RJ_SALES_DATA;
+--------------------------------------------------------------------------------------------------------------------------------------
+CREATE OR REPLACE TABLE RJ_SALES_DATA AS 
+SELECT *,
+DATEDIFF('DAY',ORDER_DATE, SHIP_DATE) AS PROCESS_DAYS
+FROM RJ_SALES_DATA;
+----------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE OR REPLACE TABLE RJ_SALES_DATA AS
+SELECT*, 
+    CASE
+       WHEN PROCESS_DAYS <=3 THEN 5
+       WHEN PROCESS_DAYS BETWEEN 4 AND 6 THEN 4
+       WHEN PROCESS_DAYS BETWEEN 7 AND 10 THEN 3
+       ELSE 2
+     END AS RATING
+FROM RJ_SALES_DATA;
+---------------------------------------------------------------------------------------------------------------------------------------------
