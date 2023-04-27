@@ -1,0 +1,63 @@
+1. In the below elements which of them are values or an expression? eg:- values can be integer or string and expressions will be mathematical operators.
+
+- Values: 'hello', -87.8, 6
+- Expression: *, -, /, + (since they are mathematical operators)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. What is the difference between string and variable?
+
+- A string is a data type that represents a sequence of characters.
+- A variable is a name given to a value which can take on any data type, including strings.
+In other words, a string is a specific data type, while a variable is a container that can hold any data type, including strings.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Describe three different data types.
+
+- Integer: a whole number, such as -3, 0, 1, 3, etc.
+- Float: a decimal number, such as -3.14, 2.5, 0.0, etc.
+- String: a sequence of characters, such as 'hello', 'world', '123', etc.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. What is an expression made up of? What do all expressions do?
+
+- An expression is made up of one or more values, along with operators that indicate how to combine these values.
+- All expressions in Python evaluate to a value. 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5. This assignment statements, like spam = 10. What is the difference between an expression and a statement?
+
+- An expression is any piece of code that evaluates to a value.
+- A statement is a line of code that does something, such as assigning a value to a variable. 
+So, the key difference is that an expression evaluates to a value, while a statement performs some action.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6. After running the following code, what does the variable bacon contain?
+bacon = 22
+bacon + 1
+
+- The variable `bacon` will contain the value `22`. The expression `bacon + 1` evaluates to `23`, but it is not assigned to any variable.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7. What should the values of the following two terms be?
+'spam' + 'spamspam'
+'spam' * 3
+
+- Both expressions will evaluate to the same value: `'spamspamspam'`. The first expression uses the `+` operator to concatenate two strings, while the second expression uses the `*` operator to repeat a string three times.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8. Why is eggs a valid variable name while 100 is invalid?
+
+- In Python, variable names must begin with a letter (either uppercase or lowercase) or an underscore (_).
+- They can be followed by any combination of letters, digits, and underscores.
+- Since `eggs` begins with a letter, it is a valid variable name.
+- `100` begins with a digit, which is not allowed in variable names, so it is invalid.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+9. What three functions can be used to get the integer, floating-point number, or string version of a value?
+
+- `int()` can be used to get the integer version of a value.
+- `float()` can be used to get the floating-point number version of a value.
+- `str()` can be used to get the string version of a value.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10. Why does this expression cause an error? How can you fix it?
+
+'I have eaten ' + 99 + ' burritos.'
+
+
+- The error occurs because you cannot concatenate a string and a number using the `+` operator.
+- One way to fix it is to convert the number to a string using the `str()` function.
+
+'I have eaten ' + str(99) + ' burritos.'
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
