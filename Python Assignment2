@@ -1,0 +1,51 @@
+1.	The two values of the Boolean data type are True and False, and they are written as capitalized words.
+2.	The three different types of Boolean operators are AND, OR, and NOT.
+3.	Truth tables for each Boolean operator:
+•	AND operator: True AND True = True True AND False = False False AND True = False False AND False = False
+•	OR operator: True OR True = True True OR False = True False OR True = True False OR False = False
+•	NOT operator: NOT True = False NOT False = True
+4.	The values of the following expressions are:
+•	(5 > 4) and (3 == 5) = False
+•	not (5 > 4) = False
+•	(5 > 4) or (3 == 5) = True
+•	not ((5 > 4) or (3 == 5)) = False
+•	(True and True) and (True == False) = False
+•	(not False) or (not True) = True
+5.	The six comparison operators are:
+•	Greater than (>)
+•	Less than (<)
+•	Equal to (==)
+•	Not equal to (!=)
+•	Greater than or equal to (>=)
+•	Less than or equal to (<=)
+6.	The equal to operator (==) is used to compare if two values are equal. The assignment operator (=) is used to assign a value to a variable. For example, if we want to check if x is equal to 5, we would use the condition "x == 5". If we want to assign the value 5 to x, we would use the statement "x = 5".
+7.	The three blocks in the code are:
+•	Block 1: spam = 0
+•	Block 2: if spam == 10: print('eggs')
+•	Block 3: if spam > 5: print('bacon') else: print('ham') print('spam') print('spam')
+
+
+8.	if spam == 1:
+    print('Hello')
+elif spam == 2:
+    print('Howdy')
+else:
+    print('Greetings!')
+
+9.	If the program is stuck in an endless loop, you can press Ctrl + C to interrupt the execution and stop the program.
+10.	The "break" statement is used to exit a loop entirely, while the "continue" statement is used to skip the rest of the current iteration and move to the next iteration of the loop.
+11.	In a for loop, the difference between range(10), range(0, 10), and range(0, 10, 1) is:
+•	range(10) will iterate over the numbers 0 to 9.
+•	range(0, 10) will also iterate over the numbers 0 to 9. The starting value (0) and step value (1) are optional and have default values.
+•	range(0, 10, 1) will also iterate over the numbers 0 to 9 with a step size of 1. The starting value (0) and step value (1) are explicitly specified.
+12.	Program using a for loop to print numbers 1 to 10:
+             for num in range(1, 11):
+              print(num)
+Program using a while loop to print numbers 1 to 10:
+             num = 1
+              while num <= 10:
+               print(num)
+               num += 1 
+
+13.	import spam
+       spam.bacon()
