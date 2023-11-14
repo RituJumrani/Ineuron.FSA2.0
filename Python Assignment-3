@@ -1,0 +1,15 @@
+1.	Functions are advantageous in programs for several reasons. They promote code reusability, making it easier to write modular and maintainable code. They help in organizing code into logical blocks, improving readability. Functions also facilitate debugging and testing since issues can be isolated to specific functions. Additionally, functions allow for the abstraction of complex operations, enhancing the overall structure and efficiency of a program.
+2.	The code in a function runs when the function is called.
+3.	The def statement creates a function in Python.
+4.	A function is a block of reusable code defined with a name, while a function call is the act of invoking that function to execute its code.
+5.	In a Python program, there is one global scope, and local scopes are created whenever a function is called.
+6.	Variables in a local scope cease to exist once the function call returns. The local scope is destroyed, and its variables are no longer accessible.
+7.	The concept of a return value involves a function providing a result or output. A return value can be used in expressions and is the result of calling a function. Yes, it is possible to use a return value in an expression.
+8.	If a function does not have a return statement, the return value of a call to that function is None.
+9.	To make a function variable refer to the global variable, you can use the global keyword. For example, global variable_name within the function.
+10.	The data type of None is NoneType.
+11.	The sentence import areallyourpetsnamederic is not a standard Python library or module. It would result in a ModuleNotFoundError unless you have a module with that name in your project.
+12.	If you had a bacon() feature in a spam module, after importing spam, you would call it using spam.bacon().
+13.	To prevent a program from crashing if it encounters an error, you can use exception handling. This involves using try-except blocks to catch and handle exceptions gracefully.
+14.	The purpose of the try clause is to enclose code that might raise an exception. If an exception occurs, the code in the except clause is executed, allowing the program to handle errors without crashing.
+
