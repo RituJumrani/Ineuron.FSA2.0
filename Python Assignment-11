@@ -1,0 +1,32 @@
+1.	pythonCopy code
+assert spam >= 0, "spam should be a non-negative integer" 
+2.	pythonCopy code
+assert eggs.lower() != bacon.lower(), "eggs and bacon should have different case-insensitive values" 
+3.	pythonCopy code
+assert False, "This assert statement always triggers an AssertionError" 
+4.	To call logging.debug(), you need to include the following lines at the beginning of your Python script:
+pythonCopy code
+import logging logging.basicConfig(level=logging.DEBUG) 
+5.	To send logging.debug() messages to a file named programLog.txt, you would add:
+pythonCopy code
+import logging logging.basicConfig(filename='programLog.txt', level=logging.DEBUG) 
+6.	The five levels of logging, in increasing order of severity, are:
+•	DEBUG
+•	INFO
+•	WARNING
+•	ERROR
+•	CRITICAL
+7.	To disable all logging messages, you can add the following line of code:
+pythonCopy code
+logging.disable(logging.CRITICAL) 
+8.	Using logging messages is better than using print() because:
+•	Logging allows you to control the verbosity of messages using different levels.
+•	Logging messages can be directed to different outputs (console, file, etc.) without modifying the code.
+•	Logging provides more flexibility and configurability for handling messages.
+9.	
+•	Step Over: Executes the current line of code and stops at the next line. If the current line contains a function call, the entire function is executed, and the debugger stops at the line after the function call.
+•	Step In: If the current line contains a function call, the debugger enters the called function and stops at the first line of the function.
+•	Step Out: Continues execution until the function containing the current line is complete and returns, stopping at the line after the function call.
+10.	The debugger will stop after clicking Continue when it encounters a breakpoint, encounters an unhandled exception, or reaches the end of the program.
+11.	A breakpoint is a designated point in your code where the debugger should pause and allow you to inspect variables, step through code, or perform other debugging actions. It is a tool used to control the flow of execution during debugging.
+
