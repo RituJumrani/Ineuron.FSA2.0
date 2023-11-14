@@ -1,0 +1,10 @@
+1.	No, the Python Standard Library is not included with PyInputPlus. PyInputPlus is a separate third-party library that needs to be installed separately.
+2.	PyInputPlus is commonly imported with import pyinputplus as pypi to provide a shorter and more convenient alias for the module. This makes it easier to use the functions and classes provided by PyInputPlus with a concise reference.
+3.	inputInt() is used to accept integer input, while inputFloat() is used to accept floating-point input. The difference lies in the type of number expected from the user.
+4.	To ensure that the user enters a whole number between 0 and 99 using PyInputPlus, you can use the inputInt() function with the min and max arguments set:
+               pythonCopy code
+                response = pyip.inputInt(prompt='Enter a number: ', min=0, max=99) 
+5.	The allowRegexes and blockRegexes keyword arguments in PyInputPlus allow you to specify lists of regular expression patterns. allowRegexes patterns indicate which inputs are allowed, and blockRegexes patterns indicate which inputs are not allowed.
+6.	If a blank input is entered three times with inputStr(limit=3), PyInputPlus raises a TimeoutException after the third attempt since the limit of three attempts is reached without receiving valid input.
+7.	If blank input is entered three times with inputStr(limit=3, default='hello'), PyInputPlus returns the default value 'hello' after the third attempt without receiving valid input. It does not raise a TimeoutException because a default value is provided.
+
