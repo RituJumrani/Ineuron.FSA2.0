@@ -1,0 +1,24 @@
+1.	Escape characters are special characters in a string that are preceded by a backslash (\). They are used to represent characters that are difficult to type or would otherwise be misinterpreted, such as newline (\n), tab (\t), or a literal backslash (\\).
+2.	In escape characters, \n represents a newline character, and \t represents a tab character.
+3.	To include a backslash character in a string, you can use a double backslash (\\). For example, "This is a double backslash: \\\\".
+4.	The string "Howl's Moving Castle" is a correct value because the single quote character in "Howl's" is not a problem because the string itself is enclosed in double quotes. If the string were enclosed in single quotes, then the single quote within "Howl's" would need to be escaped ('Howl\'s Moving Castle').
+5.	If you don't want to use the \n character, you can use triple quotes to create a multi-line string. For example:
+pythonCopy code
+multi_line_string = '''This is line 1. This is line 2. This is line 3.''' 
+6.	The values of the given expressions are:
+•	'Hello, world!'[1] is 'e'.
+•	'Hello, world!'[0:5] is 'Hello'.
+•	'Hello, world!'[:5] is 'Hello'.
+•	'Hello, world!'[3:] is 'lo, world!'.
+7.	The values of the following expressions are:
+•	'Hello'.upper() is 'HELLO'.
+•	'Hello'.upper().isupper() is True.
+•	'Hello'.upper().lower() is 'hello'.
+8.	The values of the following expressions are:
+•	'Remember, remember, the fifth of July.'.split() splits the string into a list of words: ['Remember,', 'remember,', 'the', 'fifth', 'of', 'July.'].
+•	'-'.join('There can only one.'.split()) joins the words in the list using hyphens: 'There-can-only-one.'.
+9.	The methods for right-justifying, left-justifying, and centering a string are:
+•	Right-justifying: str.rjust(width, fillchar)
+•	Left-justifying: str.ljust(width, fillchar)
+•	Centering: str.center(width, fillchar)
+
