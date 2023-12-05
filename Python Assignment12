@@ -1,0 +1,69 @@
+In what modes should the PdfFileReader() and PdfFileWriter() File objects be opened?
+
+python
+Copy code
+# For PdfFileReader
+pdf_reader = PyPDF2.PdfFileReader(open('example.pdf', 'rb'))
+
+# For PdfFileWriter
+pdf_writer = PyPDF2.PdfFileWriter()
+output_pdf = open('output.pdf', 'wb')
+From a PdfFileReader object, how do you get a Page object for page 5?
+
+python
+Copy code
+page_object = pdf_reader.getPage(4)  # Index is 0-based, so 4 corresponds to page 5
+What PdfFileReader variable stores the number of pages in the PDF document?
+
+python
+Copy code
+num_pages = pdf_reader.numPages
+If a PdfFileReader object’s PDF is encrypted with the password swordfish, what must you do before you can obtain Page objects from it?
+
+python
+Copy code
+pdf_reader.decrypt('swordfish')
+What methods do you use to rotate a page?
+
+python
+Copy code
+page_object.rotateClockwise(90)  # Rotate clockwise by 90 degrees
+What is the difference between a Run object and a Paragraph object?
+
+In the context of python-docx library:
+
+A Paragraph object represents a paragraph in a Word document.
+A Run object represents a run of text within a paragraph, which is a contiguous range of text with the same formatting.
+How do you obtain a list of Paragraph objects for a Document object that’s stored in a variable named doc?
+
+python
+Copy code
+paragraphs = doc.paragraphs
+What type of object has bold, underline, italic, strike, and outline variables?
+
+In the context of python-docx library, a Run object has these variables.
+
+What is the difference between False, True, and None for the bold variable?
+
+False: Text is not bold.
+True: Text is bold.
+None: Inherit bold status from the style hierarchy (if the style doesn't explicitly set bold).
+How do you create a Document object for a new Word document?
+
+python
+Copy code
+from docx import Document
+doc = Document()
+How do you add a paragraph with the text 'Hello, there!' to a Document object stored in a variable named doc?
+
+python
+Copy code
+doc.add_paragraph('Hello, there!')
+What integers represent the levels of headings available in Word documents?
+
+Headings in Word documents are usually represented by integers 1 to 9, where 1 is the highest level (main heading) and 9 is the lowest level (sub-sub-sub-sub-sub-sub-sub-subheading).
+
+
+
+
+
