@@ -1,0 +1,59 @@
+What does RGBA stand for?
+
+RGBA stands for Red, Green, Blue, and Alpha. It is a color model used in computer graphics and image processing, where each pixel is represented by four components: the intensities of Red, Green, and Blue, and the Alpha channel representing the transparency or opacity of the pixel.
+
+From the Pillow module, how do you get the RGBA value of any image?
+
+You can use the getpixel() method of the Image object to get the RGBA values at a specific pixel.
+
+python
+Copy code
+from PIL import Image
+
+image = Image.open('example.png')
+rgba_value = image.getpixel((x, y))
+What is a box tuple, and how does it work?
+
+A box tuple in Pillow is a tuple representing a rectangular region in an image. It is a tuple of four values (left, top, right, bottom) specifying the coordinates of the left, top, right, and bottom edges of the box. The region includes the pixels between left and right edges and between top and bottom edges.
+
+Use your image and load in the notebook then, How can you find out the width and height of an Image object?
+
+python
+Copy code
+from PIL import Image
+
+image = Image.open('example.png')
+width, height = image.size
+What method would you call to get an Image object for a 100×100 image, excluding the lower-left quarter of it?
+
+python
+Copy code
+from PIL import Image
+
+image = Image.open('example.png')
+cropped_image = image.crop((0, 0, 50, 50))  # (left, top, right, bottom)
+After making changes to an Image object, how could you save it as an image file?
+
+You can use the save() method of the Image object to save the modified image to a file.
+
+python
+Copy code
+image.save('modified_image.png')
+What module contains Pillow’s shape-drawing code?
+
+The module containing Pillow's shape-drawing code is ImageDraw, which is part of the Pillow library.
+
+python
+Copy code
+from PIL import Image, ImageDraw
+Image objects do not have drawing methods. What kind of object does? How do you get this kind of object?
+
+The ImageDraw object has drawing methods for shapes, text, and other elements. You can obtain an ImageDraw object by calling the ImageDraw.Draw() function.
+
+python
+Copy code
+from PIL import Image, ImageDraw
+
+image = Image.new('RGB', (500, 500), 'white')
+draw = ImageDraw.Draw(image)
+# Now you can use drawing methods on the 'draw' object
