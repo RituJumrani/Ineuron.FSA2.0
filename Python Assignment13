@@ -1,0 +1,59 @@
+What advantages do Excel spreadsheets have over CSV spreadsheets?
+
+Excel spreadsheets have some advantages over CSV spreadsheets, including:
+
+Formatting: Excel supports rich formatting options, such as font styles, colors, and cell merging, which CSV does not.
+Formulas and Functions: Excel allows the use of formulas and functions, making it suitable for complex calculations, while CSV only stores plain data.
+Multiple Sheets: Excel files can have multiple sheets, providing a way to organize and structure data more effectively.
+What do you pass to csv.reader() and csv.writer() to create reader and writer objects?
+
+For csv.reader(), you pass a file object or any iterable object containing CSV-formatted data.
+
+python
+Copy code
+import csv
+with open('example.csv', 'r') as file:
+    csv_reader = csv.reader(file)
+For csv.writer(), you pass a file object and optionally specify the delimiter and other formatting options.
+
+python
+Copy code
+import csv
+with open('output.csv', 'w', newline='') as file:
+    csv_writer = csv.writer(file)
+What modes do File objects for reader and writer objects need to be opened in?
+
+For reader objects: 'r' (read mode)
+For writer objects: 'w' (write mode)
+What method takes a list argument and writes it to a CSV file?
+
+The writerow() method of the csv.writer object is used to write a list of values to a CSV file.
+
+python
+Copy code
+csv_writer.writerow(['Value1', 'Value2', 'Value3'])
+What do the keyword arguments delimiter and line terminator do?
+
+delimiter: Specifies the character used to separate fields in a CSV file. The default is a comma (,).
+lineterminator: Specifies the character used to terminate lines in the CSV file. The default is '\r\n' on Windows and '\n' on other platforms.
+Example:
+
+python
+Copy code
+csv_writer = csv.writer(file, delimiter='\t', lineterminator='\n')
+What function takes a string of JSON data and returns a Python data structure?
+
+The json.loads() function is used to parse a JSON-formatted string and return a Python data structure.
+
+python
+Copy code
+import json
+python_data = json.loads(json_string)
+What function takes a Python data structure and returns a string of JSON data?
+
+The json.dumps() function is used to serialize a Python data structure into a JSON-formatted string.
+
+python
+Copy code
+import json
+json_string = json.dumps(python_data)
