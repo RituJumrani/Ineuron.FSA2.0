@@ -1,0 +1,150 @@
+python
+Copy code
+class Thing:
+    pass
+
+print(Thing())
+
+example = Thing()
+print(example)
+The printed values are different because the first print statement prints the representation of the class itself, while the second print statement prints the representation of the object created from the class.
+
+python
+Copy code
+class Thing2:
+    letters = 'abc'
+
+print(Thing2.letters)
+The letters attribute of the Thing2 class is 'abc' and it is printed as expected.
+
+ruby
+Copy code
+class Thing3:
+    def __init__(self):
+        self.letters = 'xyz'
+
+thing3 = Thing3()
+print(thing3.letters)
+No, we don't need to create an object from the Thing3 class. We can access the 'letters' instance attribute directly using the class name.
+
+ruby
+Copy code
+class Element:
+    def __init__(self, name, symbol, number):
+        self.name = name
+        self.symbol = symbol
+        self.number = number
+
+element = Element('Hydrogen', 'H', 1)
+An object of the Element class is created with the attribute values 'Hydrogen', 'H', and 1.
+
+scss
+Copy code
+element_dict = {'name': 'Hydrogen', 'symbol': 'H', 'number': 1}
+hydrogen = Element(**element_dict)
+An object of the Element class is created using the element_dict dictionary.
+
+ruby
+Copy code
+class Element:
+    def __init__(self, name, symbol, number):
+        self.name = name
+        self.symbol = symbol
+        self.number = number
+        
+    def dump(self):
+        print(self.name, self.symbol, self.number)
+        
+hydrogen = Element('Hydrogen', 'H', 1)
+hydrogen.dump()
+The dump() method is called on the hydrogen object, which prints its attribute values.
+
+python
+Copy code
+class Element:
+    def __init__(self, name, symbol, number):
+        self.name = name
+        self.symbol = symbol
+        self.number = number
+    
+    def __str__(self):
+        return f'Element: {self.name}, Symbol: {self.symbol}, Number: {self.number}'
+
+hydrogen = Element('Hydrogen', 'H', 1)
+print(hydrogen)
+After changing the name of the dump() method to str, the hydrogen object is printed by calling print(hydrogen) and it now uses the str method to format the output.
+
+python
+Copy code
+class Element:
+    def __init__(self, name, symbol, number):
+        self.__name = name
+        self.__symbol = symbol
+        self.__number = number
+    
+    def get_name(self):
+        return self.__name
+    
+    def get_symbol(self):
+        return self.__symbol
+    
+    def get_number(self):
+        return self.__number
+    
+hydrogen = Element('Hydrogen', 'H', 1)
+print(hydrogen.get_name())
+print(hydrogen.get_symbol())
+print(hydrogen.get_number())
+The name, symbol, and number attributes of the Element class are now private. Getter methods are defined to access the values of these attributes.
+
+ruby
+Copy code
+class Bear:
+    def eats(self):
+        return 'berries'
+
+class Rabbit:
+    def eats(self):
+        return 'clover'
+
+class Octothorpe:
+    def eats(self):
+        return 'campers'
+
+bear = Bear()
+rabbit = Rabbit()
+octothorpe = Octothorpe()
+
+print(bear.eats())
+print(rabbit.eats())
+print(octothorpe.eats())
+Each class (Bear, Rabbit, Octothorpe) has a single method called eats() which returns the respective food they eat. Objects are created from each class and their eats() method is called to print their food.
+
+ruby
+Copy code
+class Laser:
+    def does(self):
+        return 'disintegrate'
+
+class Claw:
+    def does(self):
+        return 'crush'
+
+class SmartPhone:
+    def does(self):
+        return 'ring'
+
+class Robot:
+    def __init__(self):
+        self.laser = Laser()
+        self.claw = Claw()
+        self.smartphone = SmartPhone()
+    
+    def does(self):
+        print(f'Laser does: {self.laser.does()}')
+        print(f'Claw does: {self.claw.does()}')
+        print(f'SmartPhone does: {self.smartphone.does()}')
+
+robot = Robot()
+robot.does()
+The Robot class has instances of Laser, Claw, and SmartPhone classes. The does() method of the Robot class is called, which prints what each component object does.
