@@ -1,0 +1,66 @@
+Add the current date to the text file today.txt as a string.
+python
+Copy code
+from datetime import datetime
+
+current_date = datetime.now().strftime("%Y-%m-%d")
+with open("today.txt", "w") as file:
+    file.write(current_date)
+Read the text file today.txt into the string today_string.
+python
+Copy code
+with open("today.txt", "r") as file:
+    today_string = file.read()
+Parse the date from today_string.
+python
+Copy code
+parsed_date = datetime.strptime(today_string, "%Y-%m-%d")
+List the files in your current directory.
+python
+Copy code
+import os
+
+current_directory = os.getcwd()
+files_in_current_directory = os.listdir(current_directory)
+Create a list of all the files in your parent directory (minimum five files should be available).
+python
+Copy code
+parent_directory = os.path.dirname(current_directory)
+files_in_parent_directory = os.listdir(parent_directory)[:5]
+Use multiprocessing to create three separate processes. Make each one wait a random number of seconds between one and five, print the current time, and then exit.
+python
+Copy code
+import multiprocessing
+import time
+import random
+
+def print_current_time():
+    wait_time = random.randint(1, 5)
+    time.sleep(wait_time)
+    current_time = time.strftime("%H:%M:%S", time.localtime())
+    print(f"Process ID: {os.getpid()}, Current Time: {current_time}")
+
+if __name__ == "__main__":
+    processes = []
+    for _ in range(3):
+        process = multiprocessing.Process(target=print_current_time)
+        processes.append(process)
+        process.start()
+
+    for process in processes:
+        process.join()
+Create a date object of your day of birth.
+python
+Copy code
+birth_date = datetime(year=1990, month=1, day=1)  # Replace with your actual birth date
+What day of the week was your day of birth?
+python
+Copy code
+day_of_week = birth_date.strftime("%A")
+print(f"Day of the week of my birth: {day_of_week}")
+When will you be (or when were you) 10,000 days old?
+python
+Copy code
+ten_thousand_days_old = birth_date + timedelta(days=10000)
+print(f"I will be (or was) 10,000 days old on: {ten_thousand_days_old.strftime('%Y-%m-%d')}")
+Make sure to customize the code where necessary, especially in task 7 where you need to replace the birth date with your actual birth date.
