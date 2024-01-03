@@ -1,0 +1,51 @@
+1. What is the difference between enclosing a list comprehension in square brackets and parentheses?
+Answer:
+
+When enclosed in square brackets ([]), it creates a list comprehension, resulting in a new list.
+python
+Copy code
+squares = [x**2 for x in range(5)]
+When enclosed in parentheses (()), it creates a generator expression, resulting in a generator object.
+python
+Copy code
+squares_generator = (x**2 for x in range(5))
+2. What is the relationship between generators and iterators?
+Answer:
+
+Generators are a type of iterator. Every generator is an iterator, but not every iterator is a generator.
+Generators are defined using functions with the yield statement. They produce values one at a time when iterated over.
+Iterators, in general, are objects that can be iterated (looped) over, and they typically implement the __iter__() and __next__() methods.
+3. What are the signs that a function is a generator function?
+Answer:
+
+It contains the yield statement.
+The presence of yield differentiates a generator function from a regular function.
+Generator functions produce a generator iterator when called, rather than executing the entire function at once.
+4. What is the purpose of a yield statement?
+Answer:
+
+The yield statement in a function is used to produce a value in the generator and temporarily suspend the function's state.
+When the generator is iterated, the function resumes its execution from the point of the yield, providing the next value.
+This allows for the creation of iterators with potentially large or infinite sequences, computing values on-demand and saving memory.
+5. What is the relationship between map calls and list comprehensions? Make a comparison and contrast between the two.
+Comparison:
+
+Purpose: Both map calls and list comprehensions are used to transform data in a concise and readable way.
+Result: Both create new iterable objects based on an existing iterable.
+Contrast:
+
+Syntax: List comprehensions use a more compact and expressive syntax. Example: [x**2 for x in range(5)].
+Functionality: map applies a function to each item of one or more iterables, while list comprehensions can include more complex expressions.
+Type of Result: map returns a map object, and you often need to wrap it with list() to get a list. List comprehensions directly produce lists.
+Readability: List comprehensions are often considered more readable due to their concise syntax. map can be less readable when a lambda function is involved.
+Example using map:
+
+python
+Copy code
+squares_map = list(map(lambda x: x**2, range(5)))
+Example using list comprehension:
+
+python
+Copy code
+squares_list = [x**2 for x in range(5)]
+In summary, list comprehensions are often preferred for their readability and simplicity, while map can be useful when working with functions and multiple iterables.
