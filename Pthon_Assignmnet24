@@ -1,0 +1,71 @@
+1. What is the relationship between def statements and lambda expressions?
+Answer: Both def statements and lambda expressions are used for defining functions in Python.
+
+def statements:
+
+Used for creating named functions.
+Can contain multiple expressions and statements.
+Supports a block of code with a return statement.
+lambda expressions:
+Used for creating anonymous (unnamed) functions.
+Typically involves a single expression.
+Often used for short-lived functions and in situations where a function is needed for a short duration.
+
+2. What is the benefit of lambda?
+Answer: The main benefits of lambda expressions are:
+Conciseness: Lambda expressions are more concise than traditional def statements, making them suitable for short, simple functions.
+Readability: Lambda expressions are often used in situations where a small, anonymous function is needed, and using lambda can make the code more readable by keeping the function definition inline.
+
+3. Compare and contrast map, filter, and reduce.
+Answer:
+map:
+Applies a specified function to all items in an iterable (e.g., list) and returns a new iterable with the results.
+Syntax: map(function, iterable)
+filter:
+Filters elements from an iterable based on a specified function (returns only the elements for which the function returns True).
+Syntax: filter(function, iterable)
+reduce:
+Applies a binary function cumulatively to the items of an iterable, from left to right, so as to reduce the iterable to a single accumulated result.
+Syntax: functools.reduce(function, iterable[, initializer])
+
+4. What are function annotations, and how are they used?
+Answer: Function annotations in Python are a way to attach metadata to the parameters and return value of a function. They are optional and do not affect the function's behavior. Annotations are often used for documenting the expected types of parameters and the return type.
+
+Example:
+
+python
+Copy code
+def add_numbers(a: int, b: int) -> int:
+    return a + b
+In this example, a: int and b: int are parameter annotations, and -> int is the return type annotation.
+
+5. What are recursive functions, and how are they used?
+Answer: Recursive functions are functions that call themselves during their execution. They are used to break down a complex problem into simpler sub-problems. A recursive function typically has a base case to stop the recursion and a recursive case that calls the function with a modified argument.
+
+Example:
+
+python
+Copy code
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+This is a recursive function to calculate the factorial of a number.
+
+6. What are some general design guidelines for coding functions?
+Answer:
+
+Function Naming: Use descriptive and meaningful names for functions.
+Function Length: Keep functions short and focused on a specific task.
+Function Parameters: Minimize the number of parameters. Use default values or keyword arguments when appropriate.
+Code Reusability: Design functions to be reusable in different contexts.
+Documentation: Include clear and concise docstrings to explain the purpose, parameters, and return values of the function.
+
+7. Name three or more ways that functions can communicate results to a caller.
+Answer:
+
+Return Statement: Functions can use the return statement to send a value back to the caller.
+Global Variables: Functions can modify or use global variables to communicate information.
+Print Statements: Functions can print information to the console for the caller to see.
+Exception Handling: Functions can raise exceptions to indicate errors or special conditions to the caller.
