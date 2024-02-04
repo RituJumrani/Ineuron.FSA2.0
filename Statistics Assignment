@@ -1,0 +1,39 @@
+Question 1:
+Histogram Plot for the given data:
+
+10, 13, 18, 22, 27, 32, 38, 40, 45, 51, 56, 57, 88, 90, 92, 94, 99 
+You can create a histogram by grouping the data into bins and counting the frequency of observations in each bin. Here's a simple representation of the histogram:
+
+Frequency | 10| ◆ 13| ◆ 18| ◆ 22| ◆ 27| ◆ 32| ◆ 38| ◆ 40| ◆ ◆ 45| ◆ ◆ 51| ◆ ◆ 56| ◆ ◆ 57| ◆ ◆ 88| ◆ ◆ 90| ◆ ◆ 92| ◆ ◆ 94| ◆ ◆ 99| ◆ ◆ 
+Question 2:
+80% Confidence Interval Calculation:
+Given data:
+•	Population Standard Deviation (σ) = 100
+•	Sample Mean (x̄) = 520
+•	Sample Size (n) = 25
+•	Confidence Level = 80%
+The formula for the Confidence Interval (CI) is: CI=�ˉ±�(��)CI=xˉ±Z(nσ)
+CI=520±�(10025)CI=520±Z(25100)
+You need to find the Z-value for the 80% confidence level. Consult a Z-table or use a statistical calculator to find it.
+Question 3:
+Hypothesis Testing:
+Null Hypothesis (H0): �≤0.60p≤0.60 (The percentage of citizens owning a vehicle is 60% or less) Alternate Hypothesis (H1): �>0.60p>0.60 (The percentage of citizens owning a vehicle is more than 60%)
+Given data:
+•	Surveyed residents = 250
+•	Residents owning a vehicle (Yes responses) = 170
+•	Significance Level (α) = 10%
+You will perform a hypothesis test, possibly using the z-test for proportions, to determine if there's enough evidence to reject the null hypothesis.
+Question 4:
+99th Percentile Calculation:
+Given data: 2,2,3,4,5,5,5,6,7,8,8,8,8,8,9,9,10,11,11,122,2,3,4,5,5,5,6,7,8,8,8,8,8,9,9,10,11,11,12
+To find the 99th percentile, arrange the data in ascending order and identify the value below which 99% of the data falls.
+Question 5:
+Relationship in Left & Right-Skewed Data:
+•	In left-skewed (negatively skewed) data:
+•	Mean < Median < Mode
+•	In right-skewed (positively skewed) data:
+•	Mode < Median < Mean
+Graphical representation:
+
+Left-Skewed Right-Skewed /\ /\ / \ / \ / \ / \ ___/ \__________________/ \_____ 
+In left-skewed data, the tail is on the left, pulling the mean to the left of the median. In right-skewed data, the tail is on the right, pulling the mean to the right of the median. The mode is influenced by the direction of skewness.
