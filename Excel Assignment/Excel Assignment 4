@@ -1,0 +1,63 @@
+
+1. To use the ribbon commands, what menu and grouping of commands will you find the Insert and Delete command?
+To use the ribbon commands for Insert and Delete in Excel:
+
+Menu: You will find these commands under the "Home" tab on the Excel ribbon.
+Grouping of Commands:
+Insert Command Group: Located in the "Cells" group.
+Delete Command Group: Also located in the "Cells" group.
+2. If you set a row height or column width to 0 (zero), what happens to the row and column?
+If you set a row height or column width to 0 (zero):
+
+Row: The row becomes hidden, and the contents are not visible.
+Column: The column becomes hidden, and the contents are not visible.
+3. Is there a need to change the height and width in a cell? Why?
+Changing the height and width of a cell in Excel can be necessary for various reasons:
+
+Text Fit: Adjusting the row height or column width can help in fitting the text or content within a cell.
+Aesthetic Formatting: Adjusting the dimensions can be done for aesthetic purposes, improving the visual presentation of the spreadsheet.
+Printing Considerations: Modifying cell dimensions may be necessary for optimizing the appearance when printing the spreadsheet.
+4. What is the keyboard shortcut to unhide rows?
+The keyboard shortcut to unhide rows in Excel is Ctrl + Shift + 9. Select the rows surrounding the hidden rows, then use the keyboard shortcut to unhide.
+
+5. How to hide rows containing blank cells?
+To hide rows containing blank cells in Excel:
+
+Select the Rows:
+
+Select the rows that you want to hide based on the presence of blank cells.
+Apply a Filter:
+
+Go to the "Data" tab on the ribbon and click on "Filter" to apply a filter.
+Filter for Blanks:
+
+In the column header dropdown, unselect all and then select only the option for blank cells.
+Hide Filtered Rows:
+
+Right-click on any of the selected row numbers, and choose "Hide."
+6. What are the steps to hide the duplicate values using conditional formatting in Excel?
+To hide duplicate values using conditional formatting in Excel:
+
+Select the Range:
+
+Highlight the range of cells containing the data.
+Go to Home Tab:
+
+Navigate to the "Home" tab on the ribbon.
+Conditional Formatting:
+
+Click on "Conditional Formatting" in the ribbon.
+Highlight Cells Rules:
+
+Choose "Highlight Cells Rules" and then select "Duplicate Values."
+Set Formatting:
+
+Set the formatting options for the duplicate values (e.g., font color, fill color).
+Click OK:
+
+Click "OK" to apply the conditional formatting.
+Now, duplicate values in the selected range will be highlighted or formatted as per your specified formatting options.
+
+
+
+
