@@ -1,0 +1,108 @@
+
+1. Using Insert Function, give examples of any function available in the different dropdowns present in the function library. For example AutoSum, Recently Used, Text, Date & Time, etc.
+Examples of Functions in Different Dropdowns:
+AutoSum:
+
+Usage: Adds up numbers in a range.
+Location: Formulas tab > AutoSum dropdown.
+Recently Used:
+
+Usage: Displays recently used functions.
+Location: Formulas tab > Insert Function > Recently Used.
+Text:
+
+Example Function: LEFT(text, num_chars)
+Usage: Returns a specified number of characters from the start of a text string.
+Location: Formulas tab > Insert Function > Text.
+Date & Time:
+
+Example Function: TODAY()
+Usage: Returns the current date.
+Location: Formulas tab > Insert Function > Date & Time.
+2. What are the different ways you can select columns and rows?
+Selecting Columns:
+
+Click and Drag:
+
+Click on the column header and drag across adjacent columns.
+Ctrl + Spacebar:
+
+Press Ctrl + Spacebar to select the entire column of the active cell.
+Ctrl + Click:
+
+Hold Ctrl and click on multiple column headers to select non-adjacent columns.
+Selecting Rows:
+
+Click and Drag:
+
+Click on the row header and drag across adjacent rows.
+Shift + Spacebar:
+
+Press Shift + Spacebar to select the entire row of the active cell.
+Shift + Click:
+
+Hold Shift and click on multiple row headers to select non-adjacent rows.
+3. What is AutoFit and why do we use it?
+AutoFit:
+
+Usage: AutoFit adjusts the width of a column or the height of a row to fit the content within it.
+
+How to AutoFit:
+
+Column Width: Double-click the right boundary of the column header.
+Row Height: Double-click the bottom boundary of the row header.
+Why Use It:
+
+Ensures that all content in a cell is visible.
+Improves the overall appearance of the spreadsheet.
+4. How can you insert new rows and columns into the existing table?
+Inserting Rows:
+
+Select Row:
+
+Click on the row below where you want to insert new rows.
+Right-Click and Insert:
+
+Right-click and choose "Insert" from the context menu.
+Inserting Columns:
+
+Select Column:
+
+Click on the column to the right of where you want to insert new columns.
+Right-Click and Insert:
+
+Right-click and choose "Insert" from the context menu.
+5. How do you hide and unhide columns in excel?
+Hide Columns:
+
+Select Columns:
+
+Select the columns you want to hide.
+Right-Click and Hide:
+
+Right-click on the selected columns and choose "Hide."
+Unhide Columns:
+
+Select Adjacent Columns:
+
+Select the columns on either side of the hidden columns.
+Right-Click and Unhide:
+
+Right-click and choose "Unhide" from the context menu.
+6. Create an appropriate table within the worksheet and use different functions available in the AutoSum command.
+Steps to Create Table and Use AutoSum:
+
+Enter Data:
+
+Enter data in a range, ensuring it's organized in rows and columns.
+Select Data:
+
+Highlight the range of data you want to sum.
+AutoSum:
+
+Go to the "Formulas" tab.
+Click on "AutoSum" in the "Editing" group.
+Review Result:
+
+The sum of the selected range will be automatically calculated and displayed in the last row or column of the selected range.
+Experiment with other functions available in the AutoSum dropdown, such as Average, Count, Max, Min, etc., based on your data and analysis requirements.
